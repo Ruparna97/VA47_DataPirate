@@ -4,5 +4,5 @@ used textract from aws as ocr.
 
 Code base is python.
 
-Front-end is html and javascript.
+Front-end is html.
 
