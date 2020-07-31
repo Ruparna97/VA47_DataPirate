@@ -1,0 +1,103 @@
+'''
+nested dictionary pattern of python
+range parameter is for those results which are given in range: as in t9.jpg of gooddata file which has puscells:8-10
+data parameter is true is the result is numeric value otherwise false(eg:results like not found,etc)
+m and f are for male and female and are only present in names which has gender as true(i.e:depends on gender)
+the numeric keys within the test name is for age is days,it is only present where age parameter is true(i.e depends on age)
+where the data is false,the values are written as negative or positive(if the parameter shouldnt be present it is written negative ande vice versa)
+The datas given here are partly true,i added some false datas for testing,the datas are need to be modified
+'''
+param={
+	"glucose":{
+			"age":False,
+			"gender":False,
+			"range":False,
+			"data":True,
+			"value":"65-99"
+	},
+	"uric":{
+			"age":False,
+			"gender":True,
+			"m":"3.6-7.7",
+			"f":"2.5-6.8",
+			"data":True,
+			"range":False,
+	},
+	"creatinine":{
+			"age":False,
+			"gender":True,
+			"m":"0.7-1.4",
+			"f":"0.5-1.2",
+			"data":True,
+			"range":False,
+	},
+	"puscells":{
+
+			"age":False,
+			"gender":False,
+			"range":True,
+			"data":True,
+			"value":"0-4",
+	},
+	"epithelial":{
+			"age":False,
+			"gender":False,
+			"range":True,
+			"data":True,
+			"value":"4-8"
+	},
+	"cast":{
+			"age":False,
+			"gender":False,
+			"range":False,
+			"data":False,
+			"value":"negative",
+	},
+	"crystal":{
+			"age":False,
+			"gender":False,
+			"range":False,
+			"data":False,
+			"value":"positive",
+	},
+	"tsh":{
+			"age":True,
+			"gender":False,
+			"range":False,
+			"data":True,
+			3:"1-20",
+			30:"0.5-6.5",
+			150:"0.5-6.0",
+			6570:"0.5-4.5",
+			54750:"0.465-4.68"
+	},
+	"headache":{
+			"age":False,
+			"gender":False,
+			"range":False,
+			"data":True,
+			"value":"50-50"
+	},
+	"seizure":{
+			"age":False,
+			"gender":False,
+			"range":True,
+			"data":True,
+			"value":"15-25"
+			},
+	"hemipare":{
+			"age":False,
+			"gender":False,
+			"range":True,
+			"data":True,
+			"value":"30-40"
+
+			},
+	"mental-status":{
+			"age":False,
+			"gender":False,
+			"range":False,
+			"data":True,
+			"value":"40-60"
+			},
+}

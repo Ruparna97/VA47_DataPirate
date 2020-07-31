@@ -1,0 +1,5 @@
+table 2. symptoms of brain tumors. symptom tumor type primary central low-grade malignant nervous system glioma glioma meningioma lymphoma percent with symptom 
+headache 40 50 36 35 
+seizure 65-95 15-25 40 17 
+hemipare sis 5-15 30-50 22 24 
+mental-status 10 40-60 21 61 abnormalities 
