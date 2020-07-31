@@ -2,13 +2,15 @@ import pickle
 
 patients={
 	1:{
-		"digit":[],
+		"digit_glucose":[],
+		"digit_creatinine":[],
 		"age":3,
 		"gender":'m'
 
 	},
 	2:{
-		"digit":[],
+		"digit_glucose":[],
+		"digit_creatinine":[],
 		"age":5,
 		"gender":'f'
 	},

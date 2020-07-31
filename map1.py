@@ -15,7 +15,7 @@ def digitize(line,tname,id):
 	value=0
 	print("digitize",id)
 	for i in line.split():
-
+		print(i)
 		if(data.param[tname]["data"]):
 			if(data.param[tname]["range"]):
 				low=high=0
@@ -148,21 +148,45 @@ def mapping(id):
 	with open("outpu1.txt") as openfile:
 		for line in openfile:  
 			for part in line.split():
-				for i in data.param:
-					if i in part:
-						print(i)
-						val=digitize(line,i,id)
-						if(val!=0):
-							avg=avg+val
-							t=t+1
-							print(avg)
-	avg1=avg/t
-	print(avg1)
-	mydict[id]["digit"].append(avg1)
+				#for i in data.param:
+					if "creatinine" in part:
+						print(part)
+						val=digitize(line,"creatinine",id)
+						if(val>0):
+							print(val)
+							# if(val!=0):
+							# 	avg=avg+val
+							# 	t=t+1
+							# 	print(avg)
+							mydict[id]["digit_creatinine"].append(val)
+							output = open('patient.pkl', 'wb')
+							pickle.dump(mydict, output)
+							output.close()
 
-	output = open('patient.pkl', 'wb')
-	pickle.dump(mydict, output)
-	output.close()
+	with open("outpu1.txt") as openfile:
+		for line in openfile:  
+			for part in line.split():
+
+				if "glucose" in part:
+					print(part)
+					val=digitize(line,"glucose",id)
+					if(val>0):
+						print(val)
+						# if(val!=0):
+						# 	avg=avg+val
+						# 	t=t+1
+						# 	print(avg)
+						mydict[id]["digit_glucose"].append(val)
+						output = open('patient.pkl', 'wb')
+						pickle.dump(mydict, output)
+						output.close()
+	# avg1=avg/t
+	# print(avg1)
+	#mydict[id]["digit"].append(avg1)
+
+	# output = open('patient.pkl', 'wb')
+	# pickle.dump(mydict, output)
+	# output.close()
 
 	print(mydict)	
 
