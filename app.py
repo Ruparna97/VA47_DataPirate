@@ -112,7 +112,7 @@ import os
 from flask import Flask, render_template, request,Response,redirect,url_for
 import pickle
 import loop
-import graph
+import graph1
 import time
 import shutil
 
@@ -124,6 +124,7 @@ pkl_file.close()
 
 app = Flask(__name__)
 APP_ROOT = os.path.dirname(os.path.abspath(__file__))
+
 @app.route("/")
 def index():
     return render_template("index.html")
@@ -180,7 +181,7 @@ def register():
         pickle.dump(mydict, output)
         output.close()
         print(mydict)
-        return redirect(url_for("login"))
+        return redirect(url_for("index"))
     return render_template("register.html")
 
 
@@ -202,7 +203,7 @@ def upload():
     global xyz
     print(mydict)
     loop.looping(xyz)
-    graph.graphing(xyz)
+    graph1.graphing(xyz)
     shutil.rmtree('images')
     return render_template("complete.html",graph="chart.png")
 @app.route("/test", methods=['GET','POST'])
