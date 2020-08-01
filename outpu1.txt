@@ -1,3 +1,5 @@
-sample results. actual results may vary. patient information report status: final specimen information ordering physician specimen: dob: age: requisition: client information gender: lab ref no: fasting: accesa clinical info: l a b s collected: order today received: www.accesalabs.com/diabetes reported: test name result flag reference range lab 
-glucose 
-glucose 124 high 65-99 mg/dl 01 performing laboratory information: 1 of 1 
+table 2. symptoms of brain tumors. symptom tumor type primary central low-grade malignant nervous system glioma glioma meningioma lymphoma percent with symptom 
+headache 40 50 36 35 
+seizure 65-95 15-25 40 17 
+hemipare sis 5-15 30-50 22 24 
+mental-status 10 40-60 21 61 abnormalities 
