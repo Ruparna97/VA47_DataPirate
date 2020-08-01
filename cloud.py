@@ -25,10 +25,12 @@ def get_table_csv_results(file_name):
 	for item in response["Blocks"]:
 		if item["BlockType"] == "WORD":
 			for i in test_param.param:
-				if i in item['Text'].lower():
+				#if i in item['Text'].lower():
 				if(CSequenceMatcher(lambda x: x == " ",i,item['Text'].lower()).ratio()>0.7):
 					f.write("\n")
 			f.write(item['Text'].lower() +" ")
+
+#get_table_csv_results("imgupld/test2.jpg")
 
 
 

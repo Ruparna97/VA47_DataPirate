@@ -1,10 +1,1 @@
-uric 1
-tsh 1
-glucose  3
-glucose 3
-creatinine 1
-creatinine 1
-headache 4
-seizure 4
-hemipare 4
-mental-status 4
+uric 4

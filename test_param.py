@@ -121,5 +121,20 @@ param={
 			"data":True,
 			"value":"27-32"
 		},
+		"globulins":{
+			"age":False,
+			"gender":False,
+			"range":False,
+			"data":True,
+			"value":"2.0-3.6"
+
+		},
+		"albumin":{
+			"age":False,
+			"gender":False,
+			"range":False,
+			"data":True,
+			"value":"3.5-5"
+		}
 
 }
