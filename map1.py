@@ -206,22 +206,24 @@ def mapping(id):
 							if(val>0):
 								#f= open("guru99.txt","w+")
 								f.write(i+" %d\r\n" % val)
-	# 							print(val)
-	# 							# if(val!=0):
-	# 							# 	avg=avg+val
-	# 							# 	t=t+1
-	# 							# 	print(avg)
-	# 							mydict[id]["digit_creatinine"].append(val)
-	# 							output = open('patient.pkl', 'wb')
-	# 							pickle.dump(mydict, output)
-	# 							output.close()
-	# # avg1=avg/t
-	# print(avg1)
-	#mydict[id]["digit"].append(avg1)
+								print(val)
+								if(val!=0):
+									avg=avg+val
+									t=t+1
+									print(avg)
+								# mydict[id]["digit"].append(val)
+								# output = open('patient.pkl', 'wb')
+								# pickle.dump(mydict, output)
+								# output.close()
 
-	# output = open('patient.pkl', 'wb')
-	# pickle.dump(mydict, output)
-	# output.close()
+		f.close()
+	avg1=avg/t
+	print(avg1)
+	mydict[id]["digit"].append(avg1)
+
+	output = open('patient.pkl', 'wb')
+	pickle.dump(mydict, output)
+	output.close()
 
 	print(mydict)	
 

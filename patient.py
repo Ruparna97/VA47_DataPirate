@@ -2,6 +2,7 @@ import pickle
 
 patients={
 	1:{
+		"digit":[],
 		"digit_glucose":[],
 		"digit_creatinine":[],
 		"digit_blood":[],
@@ -10,6 +11,7 @@ patients={
 
 	},
 	2:{
+		"digit":[],
 		"digit_glucose":[],
 		"digit_creatinine":[],
 		"digit_blood":[],

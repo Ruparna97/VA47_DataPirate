@@ -5,17 +5,27 @@ import os
 
 
 
-'''
+def graphing(id):
 
-plt.plot(x, y, color='green', linestyle='dashed', linewidth = 3, marker='o', markerfacecolor='blue', markersize=12)
-plt.ylim(0,4)
-plt.xlabel('time')
-plt.ylabel('health')
+	pkl_file = open('patient.pkl', 'rb')
+	mydict = pickle.load(pkl_file)
+	pkl_file.close()
+	x=[]
+	y = mydict[id]["digit"]
+	for i in range(len(mydict[id]["digit"])):
+		x.append(i+1)
 
-plt.title('Line graph!')
+	plt.plot(x, y, color='green', linestyle='dashed', linewidth = 3, marker='o', markerfacecolor='blue', markersize=12)
+	plt.ylim(0,4)
+	plt.xlabel('Time')
+	plt.ylabel('Overall Health')
 
-plt.show()
-'''
+	plt.title('Line graph!')
+
+	#plt.show()
+	plt.savefig("static/chart.png")
+	plt.close()
+
 
 '''
 fig = plt.figure()
@@ -28,38 +38,38 @@ ax.set_title('TrendChart')
 ax.bar(x,y)
 plt.show()
 '''
-def graphing(id):
+# def graphing(id):
 
-	pkl_file = open('patient.pkl', 'rb')
-	mydict = pickle.load(pkl_file)
-	pkl_file.close()
-	x=[]
-	y = mydict[id]["digit"]
-	for i in range(len(mydict[id]["digit"])):
-		x.append(i+1)
+# 	pkl_file = open('patient.pkl', 'rb')
+# 	mydict = pickle.load(pkl_file)
+# 	pkl_file.close()
+# 	x=[]
+# 	y = mydict[id]["digit"]
+# 	for i in range(len(mydict[id]["digit"])):
+# 		x.append(i+1)
 
-	print(mydict)
-	width = 0.8 # width of the bars
+# 	print(mydict)
+# 	width = 0.8 # width of the bars
 
-	fig, ax = plt.subplots()
-	rects1 = ax.bar(x, y, width, color='b')
+# 	fig, ax = plt.subplots()
+# 	rects1 = ax.bar(x, y, width, color='b')
 
-	ax.set_ylim(0,5)
-	ax.set_ylabel('Health')
-	ax.set_xlabel('Time')
-	ax.set_title('TrendChart')
-	#ax.set_xticks(np.add(x,(width/2))) # set the position of the x ticks
+# 	ax.set_ylim(0,5)
+# 	ax.set_ylabel('Health')
+# 	ax.set_xlabel('Time')
+# 	ax.set_title('TrendChart')
+# 	#ax.set_xticks(np.add(x,(width/2))) # set the position of the x ticks
 
 
-	def autolabel(rects):
-	    # attach some text labels
-	    for rect in rects:
-	        height = rect.get_height()
-	        ax.text(rect.get_x() + rect.get_width()/2., 1.05*height,
-	                '%d' % int(height),
-	                ha='center', va='bottom')
+# 	def autolabel(rects):
+# 	    # attach some text labels
+# 	    for rect in rects:
+# 	        height = rect.get_height()
+# 	        ax.text(rect.get_x() + rect.get_width()/2., 1.05*height,
+# 	                '%d' % int(height),
+# 	                ha='center', va='bottom')
 
-	autolabel(rects1)
+# 	autolabel(rects1)
 	
-	plt.savefig("static/chart.png")
-	plt.close(fig)
+# 	plt.savefig("static/chart.png")
+# 	plt.close(fig)
