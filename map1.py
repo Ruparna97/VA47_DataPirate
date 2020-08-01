@@ -44,11 +44,11 @@ def digitize(line,tname,id):
 					low1,high1= float(a[0]),float(a[1])
 					if(low>=low1 and high<=high1):
 						value=1
-					if((low1-low)>1 or (high-high1)>1):
+					elif((low1-low)>1 or (high-high1)>1):
 						value=2
-					if((low1-low)>3 or (high-high1)>3):
+					elif((low1-low)>3 or (high-high1)>3):
 						value=3
-					if((low1-low)>6 or (high-high1)>6):
+					elif((low1-low)>6 or (high-high1)>6):
 						value=4
 				
 
@@ -76,11 +76,11 @@ def digitize(line,tname,id):
 								low1,high1= float(a[0]),float(a[1])
 								if(low>=low1 and high<=high1):
 										value=1
-								if((low1-low)>1 or (high-high1)>1):
+								elif((low1-low)>1 or (high-high1)>1):
 										value=2
-								if((low1-low)>3 or (high-high1)>3):
+								elif((low1-low)>3 or (high-high1)>3):
 										value=3
-								if((low1-low)>6 or (high-high1)>6):
+								elif((low1-low)>6 or (high-high1)>6):
 										value=4
 
 						print(value)
@@ -101,16 +101,23 @@ def digitize(line,tname,id):
 						else:
 							a=data.param[tname]["value"]
 						a = a.split('-')
+						print(a)
 						low,high= float(a[0]),float(a[1])
 						i=float(i)
 						if(i<=high and i>=low):
 								value=1
-						if(i<=(low+(0.1*low)) or i>=(high +(0.1*high))):
-								value=2
-						if(i<=(low+(0.2*low)) or i>=(high +(0.2*high))):
-								value=3
-						if(i<=(low+(0.4*low)) or i>=(high +(0.4*high))):
-								value=4
+						elif(i<=(low+(0.4*low)) or i>=(high +(0.4*high))):
+						 		value=4		
+						elif(i<=(low+(0.2*low)) or i>=(high +(0.2*high))):
+						 		value=3
+						elif(i<=(low+(0.1*low)) or i>=(high +(0.1*high))):
+						 		value=2
+						# elif(i<=(low+(0.1*low)) or i>=(high +(0.1*high))):
+						# 		value=2
+						# elif(i<=(low+(0.2*low)) or i>=(high +(0.2*high))):
+						# 		value=3
+						# elif(i<=(low+(0.4*low)) or i>=(high +(0.4*high))):
+						# 		value=4
 
 						print(value)
 						break
@@ -199,7 +206,6 @@ def mapping(id):
 							if(val>0):
 								#f= open("guru99.txt","w+")
 								f.write(i+" %d\r\n" % val)
-		f.close()
 	# 							print(val)
 	# 							# if(val!=0):
 	# 							# 	avg=avg+val

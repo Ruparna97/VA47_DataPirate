@@ -150,4 +150,6 @@ def mapping(id):
 							print(val)
 
 
+
+print(mydict)
 mapping(1)

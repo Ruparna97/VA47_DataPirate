@@ -30,7 +30,7 @@ def get_table_csv_results(file_name):
 					f.write("\n")
 			f.write(item['Text'].lower() +" ")
 
-#get_table_csv_results("imgupld/test2.jpg")
+# get_table_csv_results("imgupld/Type3.jpg")
 
 
 

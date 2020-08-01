@@ -4,6 +4,7 @@ patients={
 	1:{
 		"digit_glucose":[],
 		"digit_creatinine":[],
+		"digit_blood":[],
 		"age":3,
 		"gender":'m'
 
@@ -11,6 +12,7 @@ patients={
 	2:{
 		"digit_glucose":[],
 		"digit_creatinine":[],
+		"digit_blood":[],
 		"age":5,
 		"gender":'f'
 	},

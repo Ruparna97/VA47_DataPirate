@@ -135,6 +135,14 @@ param={
 			"range":False,
 			"data":True,
 			"value":"3.5-5"
+		},
+		"uric":{
+			"age":False,
+			"gender":True,
+			"m":"3.6-7.7",
+			"f":"2.5-6.8",
+			"data":True,
+			"range":False,
 		}
 
 }
