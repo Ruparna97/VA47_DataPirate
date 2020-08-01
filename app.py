@@ -64,6 +64,7 @@ def register():
         xyz=mail
         print("xyzz",xyz)
         mydict[mail]={}
+        mydict[mail]["digit"]=[]
         mydict[mail]["digit_creatinine"]=[]
         mydict[mail]["digit_glucose"]=[]
         mydict[mail]["age"]=int(age)
