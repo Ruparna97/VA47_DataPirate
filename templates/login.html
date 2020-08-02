@@ -1,33 +1,63 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
     <title>Login | Flask</title>
+    <link rel="icon" type="image/png" href="PicsArt_08-01-07.39.34.png">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-    <style type="text/css">
-      body{
-        background-color: gray;
-      }
+    <style>
+        body{
+            background-image:url(static/eb60823cf0dd7c2a92edee36ed2a3fe6.jpg);
+            background-size: cover;
+        }
+        
+        #myDIV2
+        {
+            height: 250px;
+            width: 42%;
+            background-color:rgba(239,230,230,0.10);
+            margin-left: 10%;
+            margin-top: -60px;
+    
+            
+            
+        }
+        #myDIV3{
+            height: auto;
+            width: 500;
+            margin-left: 65%;
+        }
+    
+    
+    
     </style>
 </head>
+
 <body>
-    <h1><center>DIGI-DOC</center></h1>
-    <div class="container">
+    <br>
+    
+    <div id="myDIV3">
+        <h1><img src="static/PicsArt_08-01-07.39.34.png" width="150" height="150" alt=""/><font size="+3" color=#FFFFFF face="Avenir Next">DIGI-DOC</font></h1>
+            
+        </div>
+    <div id="myDIV2"><br>
+        <center><font size="+2" color=#FFFFFF face="Avenir Next">Login using patient ID</font></center>
+        <div class="container">
         <div class="row" style="margin-top: 40px">
             <div class="col-sm-6">
                 <form method="POST">
                     <div class="form-group">
-                      <label for="email">ID : </label>
-                      <input type="text" name="mail" class="form-control" id="mail" PLACEHOLDER="enter id">
+                      <label for="email"><font size="+1" color=#FFFFFF face="Avenir Next">PATIENT ID : </font></label>
+                      <input type="text" name="mail" class="form-control" id="mail" PLACEHOLDER="ENTER YOUR ID">
                     </div>
-                    <button type="submit" class="btn form-control btn-default">Login</button>
+                    <button type="submit" class="btn form-control btn-success">Login</button>
                 </form>
             </div>
         </div>
@@ -36,5 +66,11 @@
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        
+        
+        
+        
+    
+    </div>
 </body>
 </html>

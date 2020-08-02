@@ -1,12 +1,1 @@
-rdw 4
-lymphocyte 4
-monocyte 4
-eosinophil 4
-mcv 1
-mch 1
-mch 4
-mchc 1
-rdw 4
-mpv 4
-pct 4
-pdw 1
+creatinine 1
