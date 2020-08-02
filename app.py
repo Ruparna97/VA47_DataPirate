@@ -2,7 +2,7 @@
 import os
 from flask import Flask, render_template, request,Response,redirect,url_for
 import pickle
-import loop
+import loop1
 import graph
 import time
 import shutil
@@ -95,7 +95,7 @@ def upload():
         file.save(destination)
     global xyz
     print(mydict)
-    loop.looping(xyz)
+    loop1.looping(xyz)
     graph.graphing(xyz)
     shutil.rmtree('images')
     return render_template("complete.html",graph="chart.png")
