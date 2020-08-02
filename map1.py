@@ -43,7 +43,7 @@ def digitize(line,tname,id):
 					
 					a=a.split('-')
 					low1,high1= float(a[0]),float(a[1])
-					f.write(str(low)+"-"+str(high)+","+str(low1)+"-"+str(high1)+" ")
+					f.write(str(low)+"-"+str(high)+","+"  ")
 					if(low>=low1 and high<=high1):
 						value=1
 					elif((low1-low)>1 or (high-high1)>1):
@@ -76,7 +76,7 @@ def digitize(line,tname,id):
 					
 								a=a.split('-')
 								low1,high1= float(a[0]),float(a[1])
-								f.write(str(low)+"-"+str(high)+","+str(low1)+"-"+str(high1)+" ")
+								f.write(str(low)+"-"+str(high)+"   ")
 								if(low>=low1 and high<=high1):
 										value=1
 								elif((low1-low)>1 or (high-high1)>1):
@@ -110,7 +110,7 @@ def digitize(line,tname,id):
 						i=float(i)
 						print(i)
 						# f= open("static/outpu1.txt","a+")
-						f.write(str(i)+","+str(low)+" "+str(high)+" ")
+						f.write("Result :"+str(i)+" || ")
 						if(i<=high and i>=low):
 								value=1
 						elif(i<=(low+(0.4*low)) or i>=(high +(0.4*high))):
@@ -214,7 +214,7 @@ def mapping(id):
 							val=digitize(line,i,id)
 							if(val>0):
 								#f= open("guru99.txt","w+")
-								f.write(" %d\r\n" % val)
+								f.write(" Digitized Parameter: %d\r\n" % val)
 								print(val)
 								if(val!=0):
 									avg=avg+val

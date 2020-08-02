@@ -151,7 +151,7 @@ param={
 			"data":True,
 			"value":"11.6-13.7"
 		},
-		"platelet":{
+		"platelet c":{
 			"age":False,
 			"gender":False,
 			"range":False,

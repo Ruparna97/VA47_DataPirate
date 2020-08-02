@@ -26,7 +26,7 @@ def get_table_csv_results(file_name):
 		if item["BlockType"] == "WORD":
 			for i in data.param:
 				#if i in item['Text'].lower():
-				if(CSequenceMatcher(lambda x: x == " ",i,item['Text'].lower()).ratio()>=0.7):
+				if(CSequenceMatcher(lambda x: x == " ",i,item['Text'].lower()).ratio()>0.7):
 					f.write("\n")
 			f.write(item['Text'].lower() +" ")
 
