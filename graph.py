@@ -16,7 +16,7 @@ def graphing(id):
 		x.append(i+1)
 
 	plt.plot(x, y, color='green', linestyle='dashed', linewidth = 3, marker='o', markerfacecolor='blue', markersize=12)
-	plt.ylim(0,4)
+	plt.ylim(0,5)
 	plt.xlabel('Time')
 	plt.ylabel('Overall Health')
 
