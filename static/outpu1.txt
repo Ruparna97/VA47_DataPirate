@@ -1,8 +1,4 @@
-uric 1
-tsh 1
-glucose 3
-creatinine 1
-headache 4
-seizure 2
-hemipare 2
-mental-status 4
+headache 40.0,50.0 50.0  4
+seizure 65.0-95.0,15.0-25.0  2
+hemipare 5.0-15.0,30.0-50.0  2
+mental-status 10.0,40.0 60.0  4

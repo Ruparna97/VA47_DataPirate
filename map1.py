@@ -4,14 +4,15 @@ import pickle
 
 avg=0
 t=0
-low=high=0
 count=0
 pkl_file = open('patient.pkl', 'rb')
 mydict = pickle.load(pkl_file)
 pkl_file.close()
-
+f= open("static/outpu1.txt","a+")
 
 def digitize(line,tname,id):
+	low=high=0
+	low1=high1=0
 	value=0
 	print("digitize",id)
 	for i in line.split():
@@ -42,6 +43,7 @@ def digitize(line,tname,id):
 					
 					a=a.split('-')
 					low1,high1= float(a[0]),float(a[1])
+					f.write(str(low)+"-"+str(high)+","+str(low1)+"-"+str(high1)+" ")
 					if(low>=low1 and high<=high1):
 						value=1
 					elif((low1-low)>1 or (high-high1)>1):
@@ -74,6 +76,7 @@ def digitize(line,tname,id):
 					
 								a=a.split('-')
 								low1,high1= float(a[0]),float(a[1])
+								f.write(str(low)+"-"+str(high)+","+str(low1)+"-"+str(high1)+" ")
 								if(low>=low1 and high<=high1):
 										value=1
 								elif((low1-low)>1 or (high-high1)>1):
@@ -106,6 +109,8 @@ def digitize(line,tname,id):
 						print(low,",",high)
 						i=float(i)
 						print(i)
+						# f= open("static/outpu1.txt","a+")
+						f.write(str(i)+","+str(low)+" "+str(high)+" ")
 						if(i<=high and i>=low):
 								value=1
 						elif(i<=(low+(0.4*low)) or i>=(high +(0.4*high))):
@@ -143,7 +148,8 @@ def digitize(line,tname,id):
 						value=1
 					print(value)
 					break
-									
+
+	print(high,",",low,",",high1,",",low1)							
 	return value			
 
 					
@@ -197,17 +203,18 @@ def mapping(id):
 	# 					output.close()
 
 	with open("outpu1.txt") as openfile:
-		f= open("static/outpu1.txt","a+")
+		# f= open("static/outpu1.txt","a+")
 		for line in openfile:  
 			for part in line.split():
 				for i in data.param:
 					if(i in part):
 						#if(("creatinine" not in part) or ("glucose" not in part)):
+							f.write(i+" ")
 							print(part)
 							val=digitize(line,i,id)
 							if(val>0):
 								#f= open("guru99.txt","w+")
-								f.write(i+" %d\r\n" % val)
+								f.write(" %d\r\n" % val)
 								print(val)
 								if(val!=0):
 									avg=avg+val

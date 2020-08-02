@@ -90,7 +90,7 @@ param={
 			"gender":False,
 			"range":True,
 			"data":True,
-			"value":"30-40"
+			"value":"30-50"
 
 			},
 	"mental-status":{
