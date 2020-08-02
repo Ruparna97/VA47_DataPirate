@@ -1,20 +1,99 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>upload</title>
+<meta charset="UTF-8">
+<title>Upload</title>
+    <style>
+    body{
+      background-image:url(static/769.jpg);
+      background-size: cover;
+    }
+    
+    #myDIV2
+    {
+      height: 500px;
+      width: 30%;
+      background-color:rgba(239,230,230,0.10);
+      margin-left: 15%;
+      margin-top: -50px;
+  
+      
+      
+    }
+      #myDIV3{
+      margin-left: 90%;
+    }
+      .button {
+  background-color:burlywood;
+  border: none;
+  color:black;
+  text-align: center;
+  font-size: 20px;
+  padding: 15px;
+  width: 110px;
+  cursor: pointer;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+  
+  
+    
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -15px;
+  transition: 0.5s;
+}
+  
+
+
+.button:hover span 
+{
+  padding-right: 20px;
+}
+  
+
+  
+  
+.button:hover span:after 
+{
+  opacity: 1;
+  right: 0;
+}
+  
+  
+  
+  </style>
 </head>
 
 <body>
-<h1><center>DIGI-DOC</center></h1>
-  <h3><center>File uploader</center></h3>
-  <h3><center>Welcome, {{ username }}</center></h3>
+  
+  
+    <div id="myDIV3">
+  <a href="#"><img src="static/PicsArt_08-01-07.39.34.png" width="180" height="163" alt=""/></a>
+  </div>
+      <br>
+      <br>
+      
+    </div>
+  <div id="myDIV2">
+    <center><font size="+4" color=burlywood face="Avenir Next">DIGI-DOC</font></center>
+    <<center><font size="+2" color=#FFFFFF face="Avenir Next">File uploader</font></center>
+    <center><font size="+3" color=#FFFFFF face="Avenir Next">Welcome!</font></center>
   <br>
   <br>
   <center>
 <form id="upload-form" action="{{ url_for('upload') }}" method="POST" enctype="multipart/form-data">
-	<br>
-  <input style="font-size: 18px;" id="image-upload" type="file" name="file" accept="image/*" multiple>
+  <br>
+  <input style="font-size: 18px; color:#FFFFFF; " id="image-upload" type="file" name="file" accept="image/*" multiple>
     <div id="msg"></div>
     <br>
     <input style="font-size: 20px; transform: translateX(-165%);" type="submit" value="Upload" id="upload-button">
@@ -22,9 +101,14 @@
 </center>
 <br>
 <br><br><br><br><br>
-<center><button style="background-color: rgba(44, 62, 80, 1);"><a href="/" style="font-size:20px; text-decoration: none; color: white;">Log Out</a></button></center>
-
-
-
+<center><a href='/'><button class="button">
+         <span>Logout</span>
+  </button></a></center>
+    
+    
+    
+    
+  
+  </div>
 </body>
 </html>
