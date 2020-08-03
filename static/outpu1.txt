@@ -1,4 +1,1 @@
-rdw Result :695.0 ||  Digitized Parameter: 4
-lymphocyte Result :36.0 ||  Digitized Parameter: 4
-monocyte Result :9.0 ||  Digitized Parameter: 4
-basophils Result :0.0 ||  Digitized Parameter: 4
+Parameter rdw || Digitized Value 3 ||  Result 19.0 || Normal Range 11.6-13.7 || 

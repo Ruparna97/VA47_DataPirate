@@ -1,5 +1,5 @@
 import cloud
-import map1
+import map2
 import os
 import pdftimg
 
@@ -14,7 +14,7 @@ def looping(id):
 			print(filename)
 			cloud.get_table_csv_results(os.path.join(directory, filename))
 			#print("loop id",id)
-			map1.mapping(id)
+			map2.mapping(id)
 		else:
 			pdftimg.convert(os.path.join(directory, filename))
 			directory=r'pdf'
