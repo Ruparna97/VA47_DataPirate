@@ -212,7 +212,7 @@ def mapping(id):
 							val=digitize(line,i,id)
 							if(val>0):
 								#f= open("guru99.txt","w+")
-								f.write("Parameter "+i+" || Digitized Value %d || " % val + " "+stat+"\n")
+								f.write("Parameter :"+i+" || Digitized Value %d || " % val + " "+stat+"\n")
 								print(val)
 								if(val!=0):
 									avg=avg+val
